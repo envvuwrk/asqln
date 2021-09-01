@@ -1,0 +1,684 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Square London</title>
+    <meta name="description" content="A Square London" />
+    <meta name="keywords" content="A Square London" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="{% static 'try/media/favicon.png' %}">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/bootstrap.min.css' %}">
+    <!-- Materialdesign icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/materialdesignicons.min.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/owl.carousel.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/animate.min.css' %}">
+    <!-- Youtube Background -->
+    <link rel="stylesheet" href="{% static 'try/css/ytplayer.css' %}">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/magnific-popup.css' %}">
+    <!-- Mobirise icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/mobiriseicons.css' %}">
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/color/default.css' %}">
+    <style>
+    .text-custom,
+    .custom-nav .navbar-nav li a:hover,
+    .custom-nav .navbar-nav li a:active,
+    .custom-nav .navbar-nav li a.active,
+    .custom-nav.stickyadd .navbar-nav li a:hover,
+    .custom-nav.stickyadd .navbar-nav li a:active,
+    .custom-nav.stickyadd .navbar-nav li a.active,
+    .about-social li a:hover,
+    .footer-alt li a i:hover {
+        color: #C5B358 !important;
+    }
+
+.btn-custom,
+.form-kerri .form-control:focus,
+.about-social li a:hover {
+    border-color: #C5B358;
+}
+
+.btn-custom,
+.back_top,
+.services-boxes .services-title-border,
+.owl-dots button.owl-dot span,
+.work_menu a.active,
+.work_menu a:hover {
+    background-color: #C5B358;
+}
+.custom-nav .navbar-nav li a {
+    color: #C5B358 !important;
+    font-size: 15px;
+    background-color: transparent !important;
+    margin: 0 7px;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+    transition: all 0.5s;
+    font-weight: 500;
+}
+.text-muted {
+    color: #C5B358 !important;
+}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+color:#C5B358;
+}
+.custom-nav .navbar-brand .logo-light,
+.custom-nav .navbar-brand .logo-dark {
+    height: 77px;
+}
+
+ .btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+    background-color: #C5B358;
+    border-color: #C5B358;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
+        <div class="container">
+            <a class="navbar-brand pt-0 logo" href="{% url 'asqapp:index' %}">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-light" width="100px" height="100px">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="main_nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" style="color: #C5B358;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:about' %}" style="color: #C5B358;">About</a>
+                    </li>
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#client" style="color: #C5B358;">Client</a>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:gallery' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:register' %}" style="color: #C5B358;">Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- START HOME -->
+    <section class="bg-dark h-100vh align-items-center d-flex" id="home">
+        <div class="bg-overlay"></div>
+        <a id="video" class="youtube-bg" data-property="{videoURL:'https://youtu.be/77B1kLCewiI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+        <div class="container z-index">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center header-content mx-auto" style="visibility: hidden;">
+                        <span class="element fw-bold"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HOME -->
+
+    <!-- START ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <img src="{% static 'try/media/bgcrop.jpg' %}" alt="" class="img-fluid mx-auto d-block img-thumbnail">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <h2 style="color: #C5B358;"><span class="fw-bold" >About</span> Us</h2>
+                        <h4 class="mt-4" style="color: #C5B358;" ><span class="text-custom fw-bold"></span></h4>
+                        <p class="text-muted mt-4" style="text-align: justify;">A Square London (ASL) is an Entertainment & Fashion Management organization launched in 2013 in London by Fashion Designers Akhil & Aiswarya. </p>
+                        <p class="text-muted mt-2" style="text-align: justify;">ASL produces Fashion Weeks, Fashion Reality Shows, Top Model Shows, International Fashion and Lifestyle Awards & Trade Fairs.</p>
+                        <p class="text-muted mt-2" style="text-align: justify;">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <div>
+<!--                            <ul class="mb-0 about-social list-inline mt-4">-->
+<!--                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-dribbble"></i></a></li>-->
+<!--                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>-->
+<!--                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"></i></a></li>-->
+<!--                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>-->
+<!--                            </ul>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+    <!-- START SERVICES -->
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2>Our <span class="fw-bold">Services</span></h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-growing-chart text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Graphic Design</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-hot-cup text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Unlimited Color</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-upload text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Media Marketing</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-layers text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Unlimited Wifi</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-website-theme text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Responsive Design</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center services-boxes rounded p-4 mt-4">
+                        <div class="services-boxes-icon">
+                            <i class="mbri-edit text-custom display-4"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">Easy to customize</h5>
+                            <div class="services-title-border"></div>
+                            <p class="text-muted mt-3">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SERVICES -->
+
+    <!-- START CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2 class="fw-bold">We are inviting,
+Designers, Exhibitors, Models and Sponsors
+to be part of our Upcoming Events</h2>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="{% url 'asqapp:register' %}" class="btn btn-custom">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CTA -->
+
+    <!-- START CLIENT -->
+<!--    <section class="section bg-light" id="client">-->
+<!--        <div class="container">-->
+<!--            <div class="row justify-content-center">-->
+<!--                <div class="col-lg-12">-->
+<!--                    <div class="text-center">-->
+<!--                        <h2>Our <span class="fw-bold">Client</span></h2>-->
+<!--                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row mt-4 pt-4">-->
+<!--                <div class="col-lg-12">-->
+<!--                    <div id="owl-demo" class="owl-carousel">-->
+<!--                        <div class="text-center testi_boxes mx-auto">-->
+<!--                            <div class="tam_testi_icon text-custom">-->
+<!--                                <i class="mbri-quote-left"></i>-->
+<!--                            </div>-->
+<!--                            <div class="mt-2">-->
+<!--                                <div class="img_testi">-->
+<!--                                    <img src="{% static 'try/images/testi/testi-1.jpg' %}" alt="" class="mx-auto img-thumbnail img-fluid rounded-circle">-->
+<!--                                </div>-->
+<!--                                <p class="client_review fst-italic mt-4 text-center text-muted">" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>-->
+<!--                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span class="fw-bold">Envato</span></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text-center testi_boxes mx-auto">-->
+<!--                            <div class="tam_testi_icon text-custom">-->
+<!--                                <i class="mbri-quote-left"></i>-->
+<!--                            </div>-->
+<!--                            <div class="mt-2">-->
+<!--                                <div class="img_testi">-->
+<!--                                    <img src="{% static 'try/images/testi/testi-2.jpg' %}" alt="" class="mx-auto img-thumbnail img-fluid d-block rounded-circle">-->
+<!--                                </div>-->
+<!--                                <p class="client_review fst-italic mt-4 text-center text-muted">" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>-->
+<!--                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span class="fw-bold">Envato</span></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text-center testi_boxes mx-auto">-->
+<!--                            <div class="tam_testi_icon text-custom">-->
+<!--                                <i class="mbri-quote-left"></i>-->
+<!--                            </div>-->
+<!--                            <div class="mt-2">-->
+<!--                                <div class="img_testi">-->
+<!--                                    <img src="{% static 'try/images/testi/testi-3.jpg' %}" alt="" class="mx-auto img-thumbnail img-fluid d-block rounded-circle">-->
+<!--                                </div>-->
+<!--                                <p class="client_review fst-italic mt-4 text-center text-muted">" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>-->
+<!--                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span class="fw-bold">Envato</span></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!-- END CLIENT -->
+
+
+    <!-- START BLOG -->
+    <section class="section bg-light" id="blog">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2>Our <span class="fw-bold">Portfolio</span></h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 mt-3">
+                    <div class="rounded blog_color p-2">
+<!--                        <div class="img_blog">-->
+<!--                            <img src="{% static 'try/images/blog/blog-1.jpg' %}" alt="" class="img-fluid rounded mx-auto d-block">-->
+<!--                        </div>-->
+                        <div class="content_blog p-3">
+                            <div>
+                                <h5 class="fw-bold mb-0"><a href="#" class="text-white">Previous Projects</a></h5>
+                            </div>
+                            <div class="mt-3">
+
+                                <p class="mt-3 desc_blog text-muted">God's Own Beauty Fashion Reality Show-2016</p>
+                                 <p class="mt-3 desc_blog text-muted">Vie Fashion Week - F/W Edition 2017-1-2017</p>
+                                 <p class="mt-3 desc_blog text-muted">Vie International Awards Edition 2018-1-2018</p>
+                                 <p class="h6 mb-0"><a href="{% url 'asqapp:gallery' %}" class="text-muted fw-bold">View Gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <div class="rounded blog_color p-2">
+
+                        <div class="content_blog p-3">
+                            <div>
+                                <h5 class="fw-bold mb-0"><a href="#" class="text-white">Previous Projects</a></h5>
+                            </div>
+                            <div class="mt-3">
+                                <p class="mt-3 desc_blog text-muted">Vie Fashion Week - S/S Edition 2019-2-2019</p>
+                                 <p class="mt-3 desc_blog text-muted">Vie International Awards Edition 2019-2-2019</p>
+                                <p class="h6 mb-0"><a href="{% url 'asqapp:gallery' %}" class="text-muted fw-bold">View Gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <div class="rounded blog_color p-2">
+<!--                        <div class="img_blog">-->
+<!--                            <img src="{% static 'try/images/blog/blog-3.jpg' %}" alt="" class="img-fluid rounded mx-auto d-block">-->
+<!--                        </div>-->
+                        <div class="content_blog p-3">
+                            <div>
+                                <h5 class="fw-bold mb-0"><a href="#" class="text-white">Upcoming Projects</a></h5>
+                            </div>
+                            <div class="mt-3">
+
+                                <p class="mt-3 desc_blog text-muted">Vie Fashion Week - Dubai 2021 -2021</p>
+                                <p class="mt-3 desc_blog text-muted">Vie International Awards - Dubai 2021-2021</p>
+                                <p class="h6 mb-0"><a href="{% url 'asqapp:register' %}" class="text-muted fw-bold">Register/Sponsor</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START WORK -->
+    <section class="section text-center" id="portfolio">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2>Our <span class="fw-bold">Works</span></h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="row mt-5 ">-->
+<!--                <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">-->
+<!--                    <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>-->
+<!--                    <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li>-->
+<!--                    <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>-->
+<!--                    <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>-->
+<!--                    <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+        </div>
+        <div class="container">
+            <div class="row mt-4 work-filter">
+                <div class="col-lg-4 work_item webdesign wordpress">
+                    <a href="{% static 'media/6.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <a href=""><img src="{% static 'media/6.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img"></a>
+                            </div>
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">VFW</p>-->
+<!--                                <h4 class="mb-0">Vie Fashion Week</h4>-->
+<!--                            </div>-->
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item WORK webdesign seo">
+                    <a href="{% static 'media/12.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <a href=""><img src="{% static 'media/12.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img"></a>
+                            </div>
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">Category</p>-->
+<!--                                <h4 class="mb-0">Project Title</h4>-->
+<!--                            </div>-->
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item seo wordpress">
+                    <a href="{% static 'media/13.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                             <div class="work_img">
+                                <a href=""><img src="{% static 'media/13.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img"></a>
+                            </div>
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">Category</p>-->
+<!--                                <h4 class="mb-0">Project Title</h4>-->
+<!--                            </div>-->
+                        </div>
+                    </a>
+                </div>
+
+<!--                <div class="col-lg-4 work_item wordpress WORK webdesign">-->
+<!--                    <a href="{% static 'try/images/works/4.jpg' %}" class="img-zoom">-->
+<!--                        <div class="work_box">-->
+<!--                            <div class="work_img">-->
+<!--                                <img src="{% static 'try/images/works/4.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">-->
+<!--                            </div>-->
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">Category</p>-->
+<!--                                <h4 class="mb-0">Project Title</h4>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 work_item seo webdesign">-->
+<!--                    <a href="{% static 'try/images/works/5.jpg' %}" class="img-zoom">-->
+<!--                        <div class="work_box">-->
+<!--                            <div class="work_img">-->
+<!--                                <img src="{% static 'try/images/works/5.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">-->
+<!--                            </div>-->
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">Category</p>-->
+<!--                                <h4 class="mb-0">Project Title</h4>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 work_item devlopment webdesign">-->
+<!--                    <a href="{% static 'try/images/works/6.jpg' %}" class="img-zoom">-->
+<!--                        <div class="work_box">-->
+<!--                            <div class="work_img">-->
+<!--                                <img src="{% static 'try/images/works/6.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">-->
+<!--                            </div>-->
+<!--                            <div class="work_detail">-->
+<!--                                <p class="mb-2">Category</p>-->
+<!--                                <h4 class="mb-0">Project Title</h4>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+    <!-- END WORK -->
+
+    <!-- END BLOG -->
+
+    <!-- START CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2><span class="fw-bold">Contact</span> Us</h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div>
+<!--                            <i class="mbri-mobile2 text-custom h1"></i>-->
+                           <a href=""><img src="{% static 'media/vfw.png' %}" alt="Vie" height="150px" width="150px"></a>
+
+                        </div>
+                        <div class="mt-3">
+                            <a href=""><h5 class="mb-0 contact_detail-title fw-bold">Vie Fashion</h5></a>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div>
+<!--                            <i class="mbri-letter text-custom h1"></i>-->
+                           <a href=""><img src="{% static 'media/VIA.png' %}" alt="Vie" height="150px" width="150px"></a>
+                        </div>
+                        <div class="mt-3">
+                            <a href=""><h5 class="mb-0 contact_detail-title fw-bold">Vie Awards</h5></a>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div>
+<!--                            <i class="mbri-pin text-custom h1"></i>-->
+                            <img src="{% static 'media/VTNTM.png' %}" alt="Vie" height="150px" width="150px">
+
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-0 contact_detail-title fw-bold">Vie</h5>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="form-kerri contact_form">
+                        <div id="message"></div>
+<!--                        <form method="post" action="php/contact.php" name="contact-form" id="working_form">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-lg-6">-->
+<!--                                    <div class="form-group mt-2">-->
+<!--                                        <input name="name" id="name" type="text" class="form-control" placeholder="Your name..." >-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-6">-->
+<!--                                    <div class="form-group mt-2">-->
+<!--                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email..." >-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="form-group mt-2">-->
+<!--                                    <input type="text" class="form-control" id="subject" placeholder="Your Subject.." />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-lg-12">-->
+<!--                                    <div class="form-group mt-2">-->
+<!--                                        <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your message..."></textarea>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-lg-12 text-end mt-2">-->
+<!--                                    <input type="submit" id="submit" name="send" class="submitBnt btn btn-custom text-uppercase" value="Send Massage">-->
+<!--                                    <div id="simple-msg"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
+
+    <!--START FOOTER-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12">
+                    <div class="text-center text-white footer-alt">
+<!--                        <ul class="list-unstyled list-inline mb-0">-->
+<!--                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>-->
+<!--                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"></i></a></li>-->
+<!--                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-pinterest"></i></a></li>-->
+<!--                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>-->
+<!--                        </ul>-->
+                        <p class="copyright_content mb-0 mt-3" style="color:#C5B358;"> 2021 &copy; A Square London.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+
+
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+
+    <!--All Javascript -->
+    <script src="{% static 'try/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'try/js/jquery.min.js' %}"></script>
+    <!-- Text Type -->
+    <script src="{% static 'try/js/typed.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'try/js/owl.carousel.min.js' %}"></script>
+    <!-- Contact Js -->
+    <script src="{% static 'try/js/contact.js' %}"></script>
+    <!-- Work Filter -->
+    <script src="{% static 'try/js/isotope.js' %}"></script>
+    <!-- Magnific Popup Js -->
+    <script src="{% static 'try/js/jquery.magnific-popup.min.js' %}"></script>
+    <!--YT Background-->
+    <script src="{% static 'try/js/jquery.mb.YTPlayer.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'try/js/custom.js' %}"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: ["Kerri Deo.", "A Graphic Designer.", "A Photographer."],
+            typeSpeed: 120,
+            backSpeed: 60,
+            backDelay: 3000,
+            loop: true
+        });
+        $(".youtube-bg").mb_YTPlayer();
+    </script>
+</body>
+</html>

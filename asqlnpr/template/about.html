@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Square London</title>
+    <meta name="description" content="A Square London" />
+    <meta name="keywords" content="A Square London" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="{% static 'try/media/favicon.png' %}">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/bootstrap.min.css' %}">
+    <!-- Materialdesign icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/materialdesignicons.min.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/owl.carousel.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/animate.min.css' %}">
+    <!-- Youtube Background -->
+    <link rel="stylesheet" href="{% static 'try/css/ytplayer.css' %}">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/magnific-popup.css' %}">
+    <!-- Mobirise icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/mobiriseicons.css' %}">
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/color/default.css' %}">
+    <style>
+    .text-custom,
+    .custom-nav .navbar-nav li a:hover,
+    .custom-nav .navbar-nav li a:active,
+    .custom-nav .navbar-nav li a.active,
+    .custom-nav.stickyadd .navbar-nav li a:hover,
+    .custom-nav.stickyadd .navbar-nav li a:active,
+    .custom-nav.stickyadd .navbar-nav li a.active,
+    .about-social li a:hover,
+    .footer-alt li a i:hover {
+        color: #C5B358 !important;
+    }
+
+    .btn-custom,
+    .form-kerri .form-control:focus,
+    .about-social li a:hover {
+        border-color: #C5B358;
+    }
+
+    .btn-custom,
+    .back_top,
+    .services-boxes .services-title-border,
+    .owl-dots button.owl-dot span,
+    .work_menu a.active,
+    .work_menu a:hover {
+        background-color: #C5B358;
+    }
+    .custom-nav .navbar-nav li a {
+        color: #C5B358 !important;
+        font-size: 15px;
+        background-color: transparent !important;
+        margin: 0 7px;
+        letter-spacing: 0.05em;
+        line-height: 24px;
+        transition: all 0.5s;
+        font-weight: 500;
+    }
+    .text-muted {
+        color: #C5B358 !important;
+    }
+    .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+    color:#C5B358;
+    }
+    .custom-nav .navbar-brand .logo-light,
+    .custom-nav .navbar-brand .logo-dark {
+        height: 77px;
+    }
+<!--    .bg-overlay  {-->
+<!--       background-image: url("{% static 'media/art.jpg' %}");-->
+<!--      background-repeat: no-repeat;-->
+<!--      background-attachment: fixed;-->
+<!--      background-size: 100% 100%;-->
+<!--      }-->
+    </style>
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
+        <div class="container">
+            <a class="navbar-brand pt-0 logo" href="{% url 'asqapp:index' %}">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-light" width="100px" height="100px">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="main_nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:index' %}" style="color: #C5B358;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:about' %}" style="color: #C5B358;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:gallery' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:register' %}" style="color: #C5B358;">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- START HOME -->
+<!--    <section class="section header-bg-img h-100vh" id="home">-->
+<!--            <div class="bg-overlay"></div>-->
+<!--            <div class="header-table">-->
+<!--                <div class="header-table-center">-->
+<!--                    <div class="container">-->
+<!--                        <div class="row justify-content-center">-->
+<!--                            <div class="col-lg-12">-->
+<!--                                <div class="text-center header-content mx-auto" style="visibility: hidden;">-->
+<!--                                    <h4 class="text-white first-title mb-4">Welcome</h4>-->
+<!--                                    <h1 class="header-name text-white text-capitalize mb-0">I'M <span class="element font-weight-bold" data-elements="Kerri Deo.,A Graphic Designer.,A Photographer."></span></h1>-->
+<!--                                    <p class="text-white mx-auto header-desc mt-4">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>-->
+<!--                                    <div class="mt-4 pt-2">-->
+<!--                                        <a href="#" class="btn btn-outline-custom btn-round">Download Cv</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--    </section>-->
+    <!-- END HOME -->
+
+    <!-- START ABOUT -->
+
+
+
+    <section class="section" id="about" style="background-color:black;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <img src="{% static 'media/6.jpg' %}" alt="" class="img-fluid mx-auto d-block img-thumbnail">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <h2 style="color: #C5B358;"><span class="fw-bold" >About</span> Us</h2>
+                        <h4 class="mt-4" style="color: #C5B358;" ><span class="text-custom fw-bold"></span></h4>
+                        <p class="text-muted mt-4" style="text-align: justify;" >A Square London (ASL) is
+                            an Entertainment & Fashion Management organization launched in 2013 in London by Fashion
+                            Designers Akhil & Aiswarya. ASL produces Fashion Weeks, Fashion Reality Shows, Top Model
+                            Shows, International Fashion and Lifestyle Awards & Trade Fairs. ASL focused to showcase
+                            and exhibit creative talents in the Fashion industry from across the globe on a single
+                            platform. Through its global connection, ASL will provide not only the finest brands and
+                            international designers to exhibit and showcase their creative art, but also introduce
+                            SME’s and YOUNG EMERGING TALENTS to market their innovative designs around the globe.
+                            ‘A Square London’ was established in London and it has been executing Fashion Shows,
+                            Reality Shows, and Fashion & Lifestyle awards with global strength. </p>
+                        <p class="text-muted mt-2" >Our team comprises highly Experienced & Talented Professionals
+                            and more importantly people with a Vision, and, one Goal to make the World a smaller
+                            place. Smaller in terms of Distance, Culture, Food, and Creativity. “We bring the
+                            World Together” through our different projects in various countries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+
+
+    <!--START FOOTER-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12">
+                    <div class="text-center text-white footer-alt">
+
+                        <p class="copyright_content mb-0 mt-3" style="color:#C5B358;"> 2021 &copy; A Square London.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+
+
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+   <!--All Javascript -->
+    <script src="{% static 'try/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'try/js/jquery.min.js' %}"></script>
+    <!-- Text Type -->
+    <script src="{% static 'try/js/typed.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'try/js/owl.carousel.min.js' %}"></script>
+    <!-- Contact Js -->
+    <script src="{% static 'try/js/contact.js' %}"></script>
+    <!-- Work Filter -->
+    <script src="{% static 'try/js/isotope.js' %}"></script>
+    <!-- Magnific Popup Js -->
+    <script src="{% static 'try/js/jquery.magnific-popup.min.js' %}"></script>
+    <!--YT Background-->
+    <script src="{% static 'try/js/jquery.mb.YTPlayer.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'try/js/custom.js' %}"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: ["Kerri Deo.", "A Graphic Designer.", "A Photographer."],
+            typeSpeed: 120,
+            backSpeed: 60,
+            backDelay: 3000,
+            loop: true
+        });
+        $(".youtube-bg").mb_YTPlayer();
+    </script>
+</body>
+</html>

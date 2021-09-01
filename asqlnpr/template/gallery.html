@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Square London</title>
+    <meta name="description" content="A Square London" />
+    <meta name="keywords" content="A Square London" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="{% static 'try/media/favicon.png' %}">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/bootstrap.min.css' %}">
+    <!-- Materialdesign icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/materialdesignicons.min.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/owl.carousel.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/animate.min.css' %}">
+    <!-- Youtube Background -->
+    <link rel="stylesheet" href="{% static 'try/css/ytplayer.css' %}">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/magnific-popup.css' %}">
+    <!-- Mobirise icons Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/mobiriseicons.css' %}">
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'try/css/color/default.css' %}">
+    <style>
+    .text-custom,
+    .custom-nav .navbar-nav li a:hover,
+    .custom-nav .navbar-nav li a:active,
+    .custom-nav .navbar-nav li a.active,
+    .custom-nav.stickyadd .navbar-nav li a:hover,
+    .custom-nav.stickyadd .navbar-nav li a:active,
+    .custom-nav.stickyadd .navbar-nav li a.active,
+    .about-social li a:hover,
+    .footer-alt li a i:hover {
+        color: #C5B358 !important;
+    }
+
+        .btn-custom,
+        .form-kerri .form-control:focus,
+        .about-social li a:hover {
+            border-color: #C5B358;
+        }
+
+        .btn-custom,
+        .back_top,
+        .services-boxes .services-title-border,
+        .owl-dots button.owl-dot span,
+        .work_menu a.active,
+        .work_menu a:hover {
+            background-color: #C5B358;
+        }
+        .custom-nav .navbar-nav li a {
+            color: #C5B358 !important;
+            font-size: 15px;
+            background-color: transparent !important;
+            margin: 0 7px;
+            letter-spacing: 0.05em;
+            line-height: 24px;
+            transition: all 0.5s;
+            font-weight: 500;
+        }
+        .text-muted {
+            color: #C5B358 !important;
+        }
+        .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+        color:#C5B358;
+        }
+        .custom-nav .navbar-brand .logo-light,
+        .custom-nav .navbar-brand .logo-dark {
+            height: 77px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
+        <div class="container">
+            <a class="navbar-brand pt-0 logo" href="{% url 'asqapp:index' %}">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-light" width="100px" height="100px">
+                <img src="{% static 'try/media/favicon.png' %}" alt="" class="img-fluid logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="main_nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:index' %}" style="color: #C5B358;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:about' %}" style="color: #C5B358;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'asqapp:register' %}" style="color: #C5B358;">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- START HOME -->
+    <section class="bg-dark h-100vh align-items-center d-flex" id="home">
+        <div class="bg-overlay"></div>
+        <a id="video" class="youtube-bg" data-property="{videoURL:'https://youtu.be/77B1kLCewiI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+        <div class="container z-index">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center header-content mx-auto" style="visibility: hidden;">
+                        <span class="element fw-bold"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HOME -->
+
+
+    <!-- START WORK -->
+    <section class="section text-center" id="portfolio">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2>Our <span class="fw-bold">Works</span></h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 ">
+                <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
+                    <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".seo">VTNTM 2020 - Audition</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".webdesign">VFW Dubai 2019</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".WORK">VIA Dubai 2019</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".wordpress">VIA India 2018</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".VFW India 2017">VFW India 2017</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".God's Own Beauty 2016">God's Own Beauty 2016</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4 work-filter">
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/1c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/1c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/2c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/2c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/3c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/3c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo">
+                    <a href="{% static 'media/4.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/4.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/5c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/5c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/6.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/6.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/7.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/7.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/8.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/8.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/9c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/9c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/10c.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/10c.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/11.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/11.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/12.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/12.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/13.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/13.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"><p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 work_item seo ">
+                    <a href="{% static 'media/14.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/14.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2"></p>
+                                <h4 class="mb-0"></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+
+                <div class="col-lg-4 work_item seo">
+                    <a href="{% static 'media/15.jpg' %}" class="img-zoom">
+                        <div class="work_box">
+                            <div class="work_img">
+                                <img src="{% static 'media/15.jpg' %}" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                            </div>
+                            <div class="work_detail">
+                                <p class="mb-2">Category</p>
+                                <h4 class="mb-0">Project Title</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END WORK -->
+
+    <!--START FOOTER-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12">
+                    <div class="text-center text-white footer-alt">
+                        <p class="copyright_content mb-0 mt-3" style="color:#C5B358;"> 2021 &copy; A Square London.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+
+
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+
+    <!--All Javascript -->
+    <script src="{% static 'try/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'try/js/jquery.min.js' %}"></script>
+    <!-- Text Type -->
+    <script src="{% static 'try/js/typed.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'try/js/owl.carousel.min.js' %}"></script>
+    <!-- Contact Js -->
+    <script src="{% static 'try/js/contact.js' %}"></script>
+    <!-- Work Filter -->
+    <script src="{% static 'try/js/isotope.js' %}"></script>
+    <!-- Magnific Popup Js -->
+    <script src="{% static 'try/js/jquery.magnific-popup.min.js' %}"></script>
+    <!--YT Background-->
+    <script src="{% static 'try/js/jquery.mb.YTPlayer.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'try/js/custom.js' %}"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: ["Kerri Deo.", "A Graphic Designer.", "A Photographer."],
+            typeSpeed: 120,
+            backSpeed: 60,
+            backDelay: 3000,
+            loop: true
+        });
+        $(".youtube-bg").mb_YTPlayer();
+    </script>
+</body>
+</html>
